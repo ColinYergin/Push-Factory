@@ -38,11 +38,6 @@ _global_script_classes=[ {
 "class": "ControllerTextureRect",
 "language": "GDScript",
 "path": "res://addons/controller_icons/objects/TextureRect.gd"
-}, {
-"base": "EditorVCSInterface",
-"class": "GitAPI",
-"language": "NativeScript",
-"path": "res://addons/godot-git-plugin/git_api.gdns"
 } ]
 _global_script_class_icons={
 "ControllerButton": "",
@@ -50,8 +45,7 @@ _global_script_class_icons={
 "ControllerSettings": "",
 "ControllerSprite": "",
 "ControllerSprite3D": "",
-"ControllerTextureRect": "",
-"GitAPI": ""
+"ControllerTextureRect": ""
 }
 
 [application]
@@ -87,7 +81,8 @@ enabled=PoolStringArray( "res://addons/controller_icons/plugin.cfg" )
 
 [gdnative]
 
-singletons=[ "res://addons/godot-git-plugin/git_api.gdnlib" ]
+singletons=[  ]
+singletons_disabled=[  ]
 
 [gui]
 
