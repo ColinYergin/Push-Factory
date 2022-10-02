@@ -805,11 +805,14 @@ func _on_LoadFileDialog_file_selected(path: String):
 		assert(dialog.mode == FileDialog.MODE_SAVE_FILE);
 		if Global.playing_campaign_level_with_path != null and path.get_base_dir() != "user://CampaignSaves":
 			log_for_user("Level Select won't detect solutions in subfolders");
+		var levelprefix = Global.get_campaign_level_prefix();
 		if "*" in path: # AAAAHHHHH I think godot does this wrong and this fixes it
-			var prefix = Global.get_campaign_level_prefix() + "*.rlvl";
+			var prefix = levelprefix + "*.rlvl";
 			path = path.left(path.length() - prefix.length() + 1);
 			if not path.ends_with(".rlvl"):
 				path += ".rlvl";
+		if not path.get_file().begins_with(levelprefix):
+			path = path.get_base_dir() + "/" + levelprefix + path.get_file();
 		save_map(path);
 
 

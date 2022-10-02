@@ -125,24 +125,6 @@ margin_top = 7.0
 margin_right = 136.0
 margin_bottom = 603.0
 
-[node name="TimeInfoLine" type="HBoxContainer" parent="PanelContainer3/VBoxContainer"]
-margin_right = 129.0
-margin_bottom = 29.0
-rect_pivot_offset = Vector2( -1174, -68 )
-
-[node name="TimeLabelLabel" type="Label" parent="PanelContainer3/VBoxContainer/TimeInfoLine"]
-margin_right = 60.0
-margin_bottom = 29.0
-custom_fonts/font = ExtResource( 5 )
-text = "Time:"
-
-[node name="TimeLabel" type="Label" parent="PanelContainer3/VBoxContainer/TimeInfoLine"]
-margin_left = 64.0
-margin_right = 77.0
-margin_bottom = 29.0
-custom_fonts/font = ExtResource( 5 )
-text = "0"
-
 [node name="FPSInfoLine2" type="HBoxContainer" parent="PanelContainer3/VBoxContainer"]
 visible = false
 margin_top = 33.0
@@ -164,9 +146,8 @@ custom_fonts/font = ExtResource( 5 )
 text = "0"
 
 [node name="SeedLineEdit" type="LineEdit" parent="PanelContainer3/VBoxContainer"]
-margin_top = 33.0
 margin_right = 129.0
-margin_bottom = 59.0
+margin_bottom = 26.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 3 )
 clear_button_enabled = true
@@ -174,32 +155,51 @@ placeholder_text = "TEST RNG \"SEED\""
 placeholder_alpha = 0.356
 
 [node name="ResetButton" type="Button" parent="PanelContainer3/VBoxContainer"]
-margin_top = 63.0
+margin_top = 30.0
 margin_right = 129.0
-margin_bottom = 104.0
+margin_bottom = 71.0
 hint_tooltip = "[R]"
 custom_fonts/font = ExtResource( 8 )
 disabled = true
 text = "Reset"
 
 [node name="StepButton" type="Button" parent="PanelContainer3/VBoxContainer"]
-margin_top = 108.0
+margin_top = 75.0
 margin_right = 129.0
-margin_bottom = 149.0
+margin_bottom = 116.0
 hint_tooltip = "[S]"
 custom_fonts/font = ExtResource( 8 )
 text = "Step"
 
 [node name="PlayCheckBox" type="Button" parent="PanelContainer3/VBoxContainer"]
-margin_top = 153.0
+margin_top = 120.0
 margin_right = 129.0
-margin_bottom = 194.0
+margin_bottom = 161.0
 hint_tooltip = "[P]"
 custom_fonts/font = ExtResource( 8 )
 toggle_mode = true
 shortcut_in_tooltip = false
 text = "Play"
 expand_icon = true
+
+[node name="TimeInfoLine" type="HBoxContainer" parent="PanelContainer3/VBoxContainer"]
+margin_top = 165.0
+margin_right = 129.0
+margin_bottom = 194.0
+rect_pivot_offset = Vector2( -1174, -68 )
+
+[node name="TimeLabelLabel" type="Label" parent="PanelContainer3/VBoxContainer/TimeInfoLine"]
+margin_right = 60.0
+margin_bottom = 29.0
+custom_fonts/font = ExtResource( 5 )
+text = "Time:"
+
+[node name="TimeLabel" type="Label" parent="PanelContainer3/VBoxContainer/TimeInfoLine"]
+margin_left = 64.0
+margin_right = 77.0
+margin_bottom = 29.0
+custom_fonts/font = ExtResource( 5 )
+text = "0"
 
 [node name="SolvedInfoLine" type="HFlowContainer" parent="PanelContainer3/VBoxContainer"]
 visible = false
