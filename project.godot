@@ -275,6 +275,8 @@ select_below_tile={
 
 [rendering]
 
+quality/driver/driver_name="GLES2"
+quality/driver/fallback_to_gles2=true
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
 environment/default_clear_color=Color( 0.133333, 0.133333, 0.133333, 1 )
