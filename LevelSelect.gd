@@ -63,23 +63,26 @@ func _ready():
 				break;
 			assert (matches.size() == 1);
 			var completed = false;
+			var completionfname = col_prefix + str(l) + ".rlvl";
 			for fname in colsaves:
-				if fname == col_prefix + str(l) + ".rlvl":
+				if fname == completionfname:
 					completed = true;
 			completed_levels[prefix] = completed;
 			var saves = [];
 			for fname in colsaves:
 				if fname.begins_with(prefix):
 					saves.append(fname);
+			if completed:
+				saves.append(completionfname);
 			var fname: String = matches[0];
 			var lvl = lvl_template.duplicate();
 			lset.add_child(lvl);
 			lvl.visible = true;
 			var lvlbtn = lvl.get_child(1);
+			if not completed:
+				lvlbtn.icon = null;
 			lvlbtn.hint_tooltip = fname;
 			lvlbtn.text = str(c) + "·" + str(l);
-			if completed:
-				lvlbtn.text += "!";
 			lvlbtn.disabled = not (completed or Global.cheat_code_unlock_all_levels or (l == 1 and c == 1));
 			if l > 1 and completed_levels.get(col_prefix + str(l - 1) + "-", false):
 				lvlbtn.disabled = false;

@@ -814,6 +814,9 @@ func _on_LoadFileDialog_file_selected(path: String):
 
 func _on_MarkCompletedButton_pressed():
 	save_map("user://CampaignSaves/" + Global.get_campaign_level_prefix().trim_suffix("-") + ".rlvl");
+	if get_tree().change_scene("res://levelselect.tscn") != OK:
+		print("Failed to open level select");
+	
 
 
 func save_map(path: String):

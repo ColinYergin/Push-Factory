@@ -1,13 +1,18 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://levelselect_font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://NavLink.tres" type="DynamicFont" id=2]
 [ext_resource path="res://LevelSelect.gd" type="Script" id=3]
 [ext_resource path="res://fontspace-free-commercial-use/teletactile-font/Teletactile-3zavL.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://tilemap.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 120
 font_data = ExtResource( 4 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 5 )
+region = Rect2( 112, 128, 16, 16 )
 
 [node name="levelselect" type="PanelContainer"]
 anchor_right = 1.0
@@ -78,15 +83,17 @@ size_flags_vertical = 6
 text = "Solutions..."
 
 [node name="LevelButton" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
-margin_left = 466.0
+margin_left = 457.0
 margin_top = 347.0
-margin_right = 719.0
+margin_right = 728.0
 margin_bottom = 378.0
 size_flags_horizontal = 6
 size_flags_vertical = 6
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 1 )
 text = "Loading levels..."
+icon = SubResource( 2 )
+icon_align = 2
 
 [node name="HSeparator" type="HSeparator" parent="VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
 margin_top = 706.0
