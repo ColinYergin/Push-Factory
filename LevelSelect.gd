@@ -93,6 +93,10 @@ func _ready():
 				print("Failed to connect level button " + path);
 			var levelnamelabel: Label = lvl.get_child(0).get_child(0);
 			levelnamelabel.text = fname.get_basename().right(prefix.length()).split("-").join(" ");
+			if lvlbtn.disabled:
+				levelnamelabel.modulate = Color(1, 1, 1, 0.35);
+			else:
+				levelnamelabel.modulate = Color(1, 1, 1, 1);
 			var solutionmenu: MenuButton = lvl.get_child(0).get_child(1);
 			if saves.empty():
 				solutionmenu.disabled = true;
