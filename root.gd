@@ -82,6 +82,7 @@ func _ready():
 					map.set_cell(x, y, 0);
 					initial_map[xy(x, y)] = 0;
 					level_map[xy(x, y)] = 0;
+			$PanelContainer3/VBoxContainer/SandboxCheckBox.pressed = true;
 		else:
 			log_for_user("Loaded autosave");
 		$PanelContainer4/ScrollContainer/VBoxContainer/CampaignTitleRow.visible = false;

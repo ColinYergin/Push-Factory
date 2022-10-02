@@ -82,6 +82,7 @@ margin_right = 271.0
 margin_bottom = 20.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
+custom_colors/font_color_disabled = Color( 0.427451, 0.427451, 0.427451, 1 )
 text = "Solutions..."
 
 [node name="LevelButton" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
