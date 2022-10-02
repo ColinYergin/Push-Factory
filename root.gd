@@ -155,6 +155,7 @@ func _process(_delta):
 			can_mark_level_as_completed = false
 	if can_mark_level_as_completed:
 		$PanelContainer4/ScrollContainer/VBoxContainer/CampaignTitleRow/MarkCompletedButton.disabled = false;
+		$PanelContainer4/ScrollContainer.scroll_vertical = 0;
 	
 	if $PanelContainer3/VBoxContainer/LoadFileDialog.visible:
 		return;
