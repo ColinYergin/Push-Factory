@@ -115,8 +115,8 @@
 <link id='-gd-engine-icon' rel='icon' type='image/png' href='Push-Factory.icon.png' />
 <link rel='apple-touch-icon' href='Push-Factory.apple-touch-icon.png'/>
 <script src="coi-serviceworker.js"></script>
-<script>
-if (SharedArrayBuffer === undefined) {
+<script type='text/javascript'>
+if (window.SharedArrayBuffer === undefined) {
   window.location.href = "https://colinyergin.github.io/Push-Factory/Exports/html/CORSError.html";
 }
 </script>
