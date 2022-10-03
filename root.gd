@@ -70,6 +70,13 @@ func _ready():
 	
 	set_map_scale(Vector2(1, 1));
 	
+	var d = Directory.new();
+	if not d.dir_exists("user://SampleMaps"):
+		if d.make_dir("user://SampleMaps") != OK:
+			log_for_user("Failed to set up the SampleMaps folder");
+		d.copy("res://Sample Maps/Entropy-3-broken.rlvl", "user://SampleMaps/Entropy-3-broken.rlvl");
+		d.copy("res://Sample Maps/penguins.rlvl", "user://SampleMaps/penguins.rlvl");
+	
 	_on_SandboxCheckBox_toggled($PanelContainer3/VBoxContainer/SandboxCheckBox.pressed);
 	$PanelContainer4/ScrollContainer/VBoxContainer/CampaignTitleRow/MarkCompletedButton.disabled = true;
 	

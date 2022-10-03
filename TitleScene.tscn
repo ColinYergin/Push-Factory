@@ -37,21 +37,21 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 1273.0
-margin_bottom = 713.0
+margin_bottom = 793.0
 alignment = 1
 
 [node name="MarginContainer0" type="MarginContainer" parent="VBoxContainer"]
 margin_left = 633.0
 margin_right = 633.0
-margin_bottom = 99.0
+margin_bottom = 126.0
 size_flags_horizontal = 4
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.61
 
 [node name="Title" type="Label" parent="VBoxContainer"]
-margin_top = 103.0
+margin_top = 130.0
 margin_right = 1266.0
-margin_bottom = 223.0
+margin_bottom = 250.0
 size_flags_horizontal = 7
 size_flags_vertical = 0
 custom_fonts/font = SubResource( 1 )
@@ -59,9 +59,9 @@ text = "Push-Factory"
 align = 1
 
 [node name="Title2" type="Label" parent="VBoxContainer"]
-margin_top = 227.0
+margin_top = 254.0
 margin_right = 1266.0
-margin_bottom = 274.0
+margin_bottom = 301.0
 size_flags_horizontal = 7
 size_flags_vertical = 0
 custom_fonts/font = SubResource( 2 )
@@ -82,9 +82,9 @@ text = "X"
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
 margin_left = 633.0
-margin_top = 278.0
+margin_top = 305.0
 margin_right = 633.0
-margin_bottom = 378.0
+margin_bottom = 431.0
 rect_min_size = Vector2( 0, 64 )
 size_flags_horizontal = 4
 size_flags_vertical = 3
@@ -92,18 +92,18 @@ size_flags_stretch_ratio = 2.62
 
 [node name="OpenEditorButton" type="LinkButton" parent="VBoxContainer"]
 margin_left = 513.0
-margin_top = 382.0
+margin_top = 435.0
 margin_right = 752.0
-margin_bottom = 422.0
+margin_bottom = 475.0
 size_flags_horizontal = 4
 custom_fonts/font = ExtResource( 2 )
 text = "Open Editor"
 
 [node name="SelectLevelButton" type="LinkButton" parent="VBoxContainer"]
 margin_left = 506.0
-margin_top = 426.0
+margin_top = 479.0
 margin_right = 760.0
-margin_bottom = 466.0
+margin_bottom = 519.0
 focus_mode = 2
 size_flags_horizontal = 4
 custom_fonts/font = ExtResource( 2 )
@@ -111,27 +111,27 @@ text = "Select Level"
 
 [node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
 margin_left = 633.0
-margin_top = 470.0
+margin_top = 523.0
 margin_right = 633.0
-margin_bottom = 531.0
+margin_bottom = 601.0
 size_flags_horizontal = 4
 size_flags_vertical = 3
 size_flags_stretch_ratio = 1.62
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 margin_left = 542.0
-margin_top = 535.0
+margin_top = 605.0
 margin_right = 724.0
-margin_bottom = 564.0
+margin_bottom = 634.0
 size_flags_horizontal = 4
 custom_fonts/font = ExtResource( 5 )
 text = "By Colin Yergin"
 
 [node name="DonateButton" type="LinkButton" parent="VBoxContainer"]
 margin_left = 535.0
-margin_top = 568.0
+margin_top = 638.0
 margin_right = 731.0
-margin_bottom = 597.0
+margin_bottom = 667.0
 hint_tooltip = "https://paypal.me/ColinYergin"
 focus_mode = 2
 size_flags_horizontal = 4
@@ -142,17 +142,17 @@ text = "Donate (PayPal)"
 
 [node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer"]
 margin_left = 633.0
-margin_top = 601.0
+margin_top = 671.0
 margin_right = 633.0
-margin_bottom = 640.0
+margin_bottom = 720.0
 size_flags_horizontal = 4
 size_flags_vertical = 3
 
 [node name="GodotLicenseButton" type="LinkButton" parent="VBoxContainer"]
 margin_left = 472.0
-margin_top = 644.0
+margin_top = 724.0
 margin_right = 794.0
-margin_bottom = 673.0
+margin_bottom = 753.0
 hint_tooltip = "https://godotengine.org/license"
 focus_mode = 2
 size_flags_horizontal = 4
@@ -163,9 +163,9 @@ text = "Made with Godot [license]"
 
 [node name="rubiconLinkButton" type="LinkButton" parent="VBoxContainer"]
 margin_left = 439.0
-margin_top = 677.0
+margin_top = 757.0
 margin_right = 826.0
-margin_bottom = 706.0
+margin_bottom = 786.0
 hint_tooltip = "https://kevan.org/rubicon"
 focus_mode = 2
 size_flags_horizontal = 4

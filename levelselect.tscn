@@ -24,7 +24,7 @@ script = ExtResource( 3 )
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 1273.0
-margin_bottom = 713.0
+margin_bottom = 793.0
 
 [node name="Title" type="Label" parent="VBoxContainer"]
 margin_right = 1266.0
@@ -44,18 +44,18 @@ margin_bottom = 74.0
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 margin_top = 78.0
 margin_right = 1266.0
-margin_bottom = 662.0
+margin_bottom = 742.0
 size_flags_vertical = 3
 alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
 margin_left = 495.0
 margin_right = 766.0
-margin_bottom = 584.0
+margin_bottom = 664.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
 margin_right = 271.0
-margin_bottom = 584.0
+margin_bottom = 664.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
 alignment = 1
@@ -87,9 +87,9 @@ custom_colors/font_color = Color( 0.658824, 0.658824, 0.658824, 1 )
 text = "Solutions..."
 
 [node name="LevelButton" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
-margin_top = 284.0
+margin_top = 324.0
 margin_right = 271.0
-margin_bottom = 315.0
+margin_bottom = 355.0
 size_flags_horizontal = 6
 size_flags_vertical = 6
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
@@ -99,9 +99,9 @@ icon = SubResource( 2 )
 icon_align = 2
 
 [node name="HSeparator" type="HSeparator" parent="VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
-margin_top = 580.0
+margin_top = 660.0
 margin_right = 271.0
-margin_bottom = 584.0
+margin_bottom = 664.0
 
 [node name="VSeparator" type="VSeparator" parent="VBoxContainer/HBoxContainer"]
 visible = false
@@ -112,13 +112,13 @@ margin_bottom = 710.0
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
 margin_left = 770.0
 margin_right = 770.0
-margin_bottom = 584.0
+margin_bottom = 664.0
 
 [node name="OpenMenuButton" type="LinkButton" parent="VBoxContainer"]
 margin_left = 522.0
-margin_top = 666.0
+margin_top = 746.0
 margin_right = 743.0
-margin_bottom = 706.0
+margin_bottom = 786.0
 size_flags_horizontal = 4
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 2 )
