@@ -48,20 +48,20 @@ columns = 2
 script = ExtResource( 2 )
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
-margin_right = 143.0
+margin_right = 147.0
 margin_bottom = 106.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
 margin_left = 7.0
 margin_top = 17.0
-margin_right = 136.0
+margin_right = 140.0
 margin_bottom = 89.0
 size_flags_vertical = 4
 alignment = 1
 
 [node name="OpenMenuButton" type="LinkButton" parent="PanelContainer/VBoxContainer"]
-margin_left = 24.0
-margin_right = 105.0
+margin_left = 26.0
+margin_right = 107.0
 margin_bottom = 30.0
 focus_mode = 2
 size_flags_horizontal = 4
@@ -71,13 +71,13 @@ text = "Menu"
 
 [node name="HSeparator" type="HSeparator" parent="PanelContainer/VBoxContainer"]
 margin_top = 34.0
-margin_right = 129.0
+margin_right = 133.0
 margin_bottom = 38.0
 
 [node name="OpenLevelsButton" type="LinkButton" parent="PanelContainer/VBoxContainer"]
-margin_left = 13.0
+margin_left = 15.0
 margin_top = 42.0
-margin_right = 116.0
+margin_right = 118.0
 margin_bottom = 72.0
 focus_mode = 2
 size_flags_horizontal = 4
@@ -86,7 +86,7 @@ custom_fonts/font = SubResource( 2 )
 text = "Levels"
 
 [node name="PanelContainer2" type="PanelContainer" parent="."]
-margin_left = 147.0
+margin_left = 151.0
 margin_right = 1280.0
 margin_bottom = 106.0
 rect_min_size = Vector2( 0, 106 )
@@ -116,13 +116,13 @@ format = 1
 
 [node name="PanelContainer3" type="PanelContainer" parent="."]
 margin_top = 110.0
-margin_right = 143.0
+margin_right = 147.0
 margin_bottom = 720.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer3"]
 margin_left = 7.0
 margin_top = 7.0
-margin_right = 136.0
+margin_right = 140.0
 margin_bottom = 603.0
 
 [node name="FPSInfoLine2" type="HBoxContainer" parent="PanelContainer3/VBoxContainer"]
@@ -146,7 +146,7 @@ custom_fonts/font = ExtResource( 5 )
 text = "0"
 
 [node name="SeedLineEdit" type="LineEdit" parent="PanelContainer3/VBoxContainer"]
-margin_right = 129.0
+margin_right = 133.0
 margin_bottom = 26.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 3 )
@@ -156,7 +156,7 @@ placeholder_alpha = 0.356
 
 [node name="ResetButton" type="Button" parent="PanelContainer3/VBoxContainer"]
 margin_top = 30.0
-margin_right = 129.0
+margin_right = 133.0
 margin_bottom = 71.0
 hint_tooltip = "[R]"
 custom_fonts/font = ExtResource( 8 )
@@ -165,7 +165,7 @@ text = "Reset"
 
 [node name="StepButton" type="Button" parent="PanelContainer3/VBoxContainer"]
 margin_top = 75.0
-margin_right = 129.0
+margin_right = 133.0
 margin_bottom = 116.0
 hint_tooltip = "[S]"
 custom_fonts/font = ExtResource( 8 )
@@ -173,7 +173,7 @@ text = "Step"
 
 [node name="PlayCheckBox" type="Button" parent="PanelContainer3/VBoxContainer"]
 margin_top = 120.0
-margin_right = 129.0
+margin_right = 133.0
 margin_bottom = 161.0
 hint_tooltip = "[P]"
 custom_fonts/font = ExtResource( 8 )
@@ -184,19 +184,19 @@ expand_icon = true
 
 [node name="TimeInfoLine" type="HBoxContainer" parent="PanelContainer3/VBoxContainer"]
 margin_top = 165.0
-margin_right = 129.0
+margin_right = 133.0
 margin_bottom = 194.0
 rect_pivot_offset = Vector2( -1174, -68 )
 
 [node name="TimeLabelLabel" type="Label" parent="PanelContainer3/VBoxContainer/TimeInfoLine"]
-margin_right = 60.0
+margin_right = 71.0
 margin_bottom = 29.0
 custom_fonts/font = ExtResource( 5 )
-text = "Time:"
+text = "Time: "
 
 [node name="TimeLabel" type="Label" parent="PanelContainer3/VBoxContainer/TimeInfoLine"]
-margin_left = 64.0
-margin_right = 77.0
+margin_left = 75.0
+margin_right = 88.0
 margin_bottom = 29.0
 custom_fonts/font = ExtResource( 5 )
 text = "0"
@@ -232,13 +232,13 @@ align = 2
 
 [node name="MarginContainer2" type="MarginContainer" parent="PanelContainer3/VBoxContainer"]
 margin_top = 198.0
-margin_right = 129.0
+margin_right = 133.0
 margin_bottom = 229.0
 size_flags_vertical = 3
 
 [node name="SelectionInfoLine" type="VBoxContainer" parent="PanelContainer3/VBoxContainer"]
 margin_top = 233.0
-margin_right = 129.0
+margin_right = 133.0
 margin_bottom = 305.0
 rect_min_size = Vector2( 0, 50 )
 rect_pivot_offset = Vector2( -1174, -68 )
@@ -246,14 +246,14 @@ hint_tooltip = "[Shift]+Left-Click to Select
 [Shift]+Right-Click to Clear"
 
 [node name="SelectionLabelLabel" type="Label" parent="PanelContainer3/VBoxContainer/SelectionInfoLine"]
-margin_right = 129.0
+margin_right = 133.0
 margin_bottom = 14.0
 text = "Selected:"
 align = 3
 
 [node name="SelectionLabel" type="Label" parent="PanelContainer3/VBoxContainer/SelectionInfoLine"]
 margin_top = 18.0
-margin_right = 129.0
+margin_right = 133.0
 margin_bottom = 32.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -262,11 +262,11 @@ autowrap = true
 
 [node name="NotSelectedLabel" type="HBoxContainer" parent="PanelContainer3/VBoxContainer/SelectionInfoLine"]
 margin_top = 36.0
-margin_right = 129.0
+margin_right = 133.0
 margin_bottom = 72.0
 
 [node name="NoneSelectedLabel" type="Label" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/NotSelectedLabel"]
-margin_right = 49.0
+margin_right = 53.0
 margin_bottom = 36.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -275,8 +275,8 @@ valign = 1
 autowrap = true
 
 [node name="ControllerTextureRect" type="TextureRect" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/NotSelectedLabel"]
-margin_left = 53.0
-margin_right = 89.0
+margin_left = 57.0
+margin_right = 93.0
 margin_bottom = 36.0
 rect_min_size = Vector2( 36, 36 )
 size_flags_horizontal = 0
@@ -289,8 +289,8 @@ show_only = 1
 max_width = 36
 
 [node name="ControllerTextureRect2" type="TextureRect" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/NotSelectedLabel"]
-margin_left = 93.0
-margin_right = 129.0
+margin_left = 97.0
+margin_right = 133.0
 margin_bottom = 36.0
 rect_min_size = Vector2( 36, 36 )
 size_flags_horizontal = 0
@@ -305,11 +305,11 @@ max_width = 36
 [node name="SomethingSelectedLabel" type="VBoxContainer" parent="PanelContainer3/VBoxContainer/SelectionInfoLine"]
 visible = false
 margin_top = 76.0
-margin_right = 121.0
+margin_right = 129.0
 margin_bottom = 290.0
 
 [node name="ControlsLabel" type="Label" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/SomethingSelectedLabel"]
-margin_right = 121.0
+margin_right = 129.0
 margin_bottom = 14.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -319,11 +319,11 @@ autowrap = true
 
 [node name="OverwriteControl" type="HBoxContainer" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/SomethingSelectedLabel"]
 margin_top = 18.0
-margin_right = 121.0
+margin_right = 129.0
 margin_bottom = 54.0
 
 [node name="OverwriteControlLabel" type="Label" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/SomethingSelectedLabel/OverwriteControl"]
-margin_right = 81.0
+margin_right = 89.0
 margin_bottom = 36.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -332,8 +332,8 @@ valign = 1
 autowrap = true
 
 [node name="ControllerTextureRect" type="TextureRect" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/SomethingSelectedLabel/OverwriteControl"]
-margin_left = 85.0
-margin_right = 121.0
+margin_left = 93.0
+margin_right = 129.0
 margin_bottom = 36.0
 rect_min_size = Vector2( 36, 36 )
 size_flags_horizontal = 0
@@ -347,11 +347,11 @@ max_width = 36
 
 [node name="OverwriteControl2" type="HBoxContainer" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/SomethingSelectedLabel"]
 margin_top = 58.0
-margin_right = 121.0
+margin_right = 129.0
 margin_bottom = 94.0
 
 [node name="OverwriteControlLabel" type="Label" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/SomethingSelectedLabel/OverwriteControl2"]
-margin_right = 81.0
+margin_right = 89.0
 margin_bottom = 36.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -360,8 +360,8 @@ valign = 1
 autowrap = true
 
 [node name="ControllerTextureRect" type="TextureRect" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/SomethingSelectedLabel/OverwriteControl2"]
-margin_left = 85.0
-margin_right = 121.0
+margin_left = 93.0
+margin_right = 129.0
 margin_bottom = 36.0
 rect_min_size = Vector2( 36, 36 )
 size_flags_horizontal = 0
@@ -375,11 +375,11 @@ max_width = 36
 
 [node name="OverwriteControl3" type="HBoxContainer" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/SomethingSelectedLabel"]
 margin_top = 98.0
-margin_right = 121.0
+margin_right = 129.0
 margin_bottom = 134.0
 
 [node name="OverwriteControlLabel" type="Label" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/SomethingSelectedLabel/OverwriteControl3"]
-margin_right = 81.0
+margin_right = 89.0
 margin_bottom = 36.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -388,8 +388,8 @@ valign = 1
 autowrap = true
 
 [node name="ControllerTextureRect" type="TextureRect" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/SomethingSelectedLabel/OverwriteControl3"]
-margin_left = 85.0
-margin_right = 121.0
+margin_left = 93.0
+margin_right = 129.0
 margin_bottom = 36.0
 rect_min_size = Vector2( 36, 36 )
 size_flags_horizontal = 0
@@ -403,11 +403,11 @@ max_width = 36
 
 [node name="OverwriteControl4" type="HBoxContainer" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/SomethingSelectedLabel"]
 margin_top = 138.0
-margin_right = 121.0
+margin_right = 129.0
 margin_bottom = 174.0
 
 [node name="OverwriteControlLabel" type="Label" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/SomethingSelectedLabel/OverwriteControl4"]
-margin_right = 81.0
+margin_right = 89.0
 margin_bottom = 36.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -416,8 +416,8 @@ valign = 1
 autowrap = true
 
 [node name="ControllerTextureRect" type="TextureRect" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/SomethingSelectedLabel/OverwriteControl4"]
-margin_left = 85.0
-margin_right = 121.0
+margin_left = 93.0
+margin_right = 129.0
 margin_bottom = 36.0
 rect_min_size = Vector2( 36, 36 )
 size_flags_horizontal = 0
@@ -431,11 +431,11 @@ max_width = 36
 
 [node name="OverwriteControl5" type="HBoxContainer" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/SomethingSelectedLabel"]
 margin_top = 178.0
-margin_right = 121.0
+margin_right = 129.0
 margin_bottom = 214.0
 
 [node name="OverwriteControlLabel" type="Label" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/SomethingSelectedLabel/OverwriteControl5"]
-margin_right = 41.0
+margin_right = 49.0
 margin_bottom = 36.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -444,8 +444,8 @@ valign = 1
 autowrap = true
 
 [node name="ControllerTextureRect" type="TextureRect" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/SomethingSelectedLabel/OverwriteControl5"]
-margin_left = 45.0
-margin_right = 81.0
+margin_left = 53.0
+margin_right = 89.0
 margin_bottom = 36.0
 rect_min_size = Vector2( 36, 36 )
 size_flags_horizontal = 0
@@ -458,8 +458,8 @@ show_only = 1
 max_width = 36
 
 [node name="ControllerTextureRect2" type="TextureRect" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/SomethingSelectedLabel/OverwriteControl5"]
-margin_left = 85.0
-margin_right = 121.0
+margin_left = 93.0
+margin_right = 129.0
 margin_bottom = 36.0
 rect_min_size = Vector2( 36, 36 )
 size_flags_horizontal = 0
@@ -473,7 +473,7 @@ max_width = 36
 
 [node name="MarginContainer3" type="MarginContainer" parent="PanelContainer3/VBoxContainer"]
 margin_top = 309.0
-margin_right = 129.0
+margin_right = 133.0
 margin_bottom = 436.0
 size_flags_vertical = 3
 size_flags_stretch_ratio = 4.0
@@ -488,18 +488,18 @@ align = 1
 
 [node name="HSeparator" type="HSeparator" parent="PanelContainer3/VBoxContainer"]
 margin_top = 440.0
-margin_right = 129.0
+margin_right = 133.0
 margin_bottom = 444.0
 
 [node name="ZoomCheckBox" type="CheckBox" parent="PanelContainer3/VBoxContainer"]
 margin_top = 448.0
-margin_right = 129.0
+margin_right = 133.0
 margin_bottom = 472.0
 text = "Zoom"
 
 [node name="UndoButton" type="Button" parent="PanelContainer3/VBoxContainer"]
 margin_top = 476.0
-margin_right = 129.0
+margin_right = 133.0
 margin_bottom = 496.0
 hint_tooltip = "[Ctrl]+[Z]"
 disabled = true
@@ -507,7 +507,7 @@ text = "Undo"
 
 [node name="RedoButton" type="Button" parent="PanelContainer3/VBoxContainer"]
 margin_top = 500.0
-margin_right = 129.0
+margin_right = 133.0
 margin_bottom = 520.0
 hint_tooltip = "[Ctrl]+[Y]
 [Ctrl]+[Shift]+[Z]"
@@ -515,13 +515,13 @@ text = "Redo"
 
 [node name="SaveButton" type="Button" parent="PanelContainer3/VBoxContainer"]
 margin_top = 524.0
-margin_right = 129.0
+margin_right = 133.0
 margin_bottom = 544.0
 text = "Save..."
 
 [node name="LoadButton" type="Button" parent="PanelContainer3/VBoxContainer"]
 margin_top = 548.0
-margin_right = 129.0
+margin_right = 133.0
 margin_bottom = 568.0
 text = "Load..."
 
@@ -543,9 +543,9 @@ filters = PoolStringArray( "*.rlvl ; Saved Levels" )
 
 [node name="SandboxCheckBox" type="CheckBox" parent="PanelContainer3/VBoxContainer"]
 margin_top = 572.0
-margin_right = 129.0
+margin_right = 133.0
 margin_bottom = 596.0
-text = "Sandbox Mode  "
+text = "Sandbox Mode   "
 
 [node name="SandboxConfirmationDialog" type="ConfirmationDialog" parent="PanelContainer3/VBoxContainer"]
 margin_right = 200.0
@@ -554,7 +554,7 @@ dialog_text = "Exit level and enter level editing mode?"
 dialog_autowrap = true
 
 [node name="PanelContainer4" type="PanelContainer" parent="."]
-margin_left = 147.0
+margin_left = 151.0
 margin_top = 110.0
 margin_right = 1280.0
 margin_bottom = 720.0
@@ -565,7 +565,7 @@ size_flags_vertical = 7
 [node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer4"]
 margin_left = 7.0
 margin_top = 7.0
-margin_right = 1126.0
+margin_right = 1122.0
 margin_bottom = 603.0
 mouse_filter = 1
 
@@ -650,7 +650,7 @@ tile_data = PoolIntArray( 0, 327699, 0 )
 [node name="UserLogVBox" type="VBoxContainer" parent="PanelContainer4"]
 margin_left = 7.0
 margin_top = 7.0
-margin_right = 1126.0
+margin_right = 1122.0
 margin_bottom = 603.0
 mouse_filter = 2
 theme = SubResource( 1 )
