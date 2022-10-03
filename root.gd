@@ -154,9 +154,10 @@ func _process(_delta):
 	for req in level_requirements:
 		if req[2] != 100:
 			can_mark_level_as_completed = false;
-	if can_mark_level_as_completed and $PanelContainer4/ScrollContainer/VBoxContainer/CampaignTitleRow/MarkCompletedButton.disabled:
+	if can_mark_level_as_completed and $PanelContainer4/ScrollContainer/VBoxContainer/CampaignTitleRow/MarkCompletedButton.disabled and $PanelContainer4/ScrollContainer/VBoxContainer/CampaignTitleRow.visible:
 		$PanelContainer4/ScrollContainer/VBoxContainer/CampaignTitleRow/MarkCompletedButton.disabled = false;
 		$PanelContainer4/ScrollContainer.scroll_vertical = 0;
+		$PanelContainer4/ScrollContainer.scroll_horizontal = 0;
 	
 	if $PanelContainer3/VBoxContainer/LoadFileDialog.visible:
 		return;
