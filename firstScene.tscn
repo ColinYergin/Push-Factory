@@ -117,19 +117,17 @@ format = 1
 [node name="PanelContainer3" type="PanelContainer" parent="."]
 margin_top = 110.0
 margin_right = 147.0
-margin_bottom = 720.0
+margin_bottom = 800.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer3"]
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 140.0
-margin_bottom = 603.0
+margin_bottom = 683.0
 
 [node name="FPSInfoLine2" type="HBoxContainer" parent="PanelContainer3/VBoxContainer"]
-visible = false
-margin_top = 33.0
-margin_right = 121.0
-margin_bottom = 62.0
+margin_right = 133.0
+margin_bottom = 29.0
 rect_pivot_offset = Vector2( -1174, -68 )
 
 [node name="FPSLabelLabel" type="Label" parent="PanelContainer3/VBoxContainer/FPSInfoLine2"]
@@ -146,8 +144,9 @@ custom_fonts/font = ExtResource( 5 )
 text = "0"
 
 [node name="SeedLineEdit" type="LineEdit" parent="PanelContainer3/VBoxContainer"]
+margin_top = 33.0
 margin_right = 133.0
-margin_bottom = 26.0
+margin_bottom = 59.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 3 )
 clear_button_enabled = true
@@ -155,26 +154,26 @@ placeholder_text = "TEST RNG \"SEED\""
 placeholder_alpha = 0.356
 
 [node name="ResetButton" type="Button" parent="PanelContainer3/VBoxContainer"]
-margin_top = 30.0
+margin_top = 63.0
 margin_right = 133.0
-margin_bottom = 71.0
+margin_bottom = 104.0
 hint_tooltip = "[R]"
 custom_fonts/font = ExtResource( 8 )
 disabled = true
 text = "Reset"
 
 [node name="StepButton" type="Button" parent="PanelContainer3/VBoxContainer"]
-margin_top = 75.0
+margin_top = 108.0
 margin_right = 133.0
-margin_bottom = 116.0
+margin_bottom = 149.0
 hint_tooltip = "[S]"
 custom_fonts/font = ExtResource( 8 )
 text = "Step"
 
 [node name="PlayCheckBox" type="Button" parent="PanelContainer3/VBoxContainer"]
-margin_top = 120.0
+margin_top = 153.0
 margin_right = 133.0
-margin_bottom = 161.0
+margin_bottom = 194.0
 hint_tooltip = "[P]"
 custom_fonts/font = ExtResource( 8 )
 toggle_mode = true
@@ -183,9 +182,9 @@ text = "Play"
 expand_icon = true
 
 [node name="TimeInfoLine" type="HBoxContainer" parent="PanelContainer3/VBoxContainer"]
-margin_top = 165.0
+margin_top = 198.0
 margin_right = 133.0
-margin_bottom = 194.0
+margin_bottom = 227.0
 rect_pivot_offset = Vector2( -1174, -68 )
 
 [node name="TimeLabelLabel" type="Label" parent="PanelContainer3/VBoxContainer/TimeInfoLine"]
@@ -231,15 +230,15 @@ text = "0"
 align = 2
 
 [node name="MarginContainer2" type="MarginContainer" parent="PanelContainer3/VBoxContainer"]
-margin_top = 198.0
+margin_top = 231.0
 margin_right = 133.0
-margin_bottom = 229.0
+margin_bottom = 272.0
 size_flags_vertical = 3
 
 [node name="SelectionInfoLine" type="VBoxContainer" parent="PanelContainer3/VBoxContainer"]
-margin_top = 233.0
+margin_top = 276.0
 margin_right = 133.0
-margin_bottom = 305.0
+margin_bottom = 348.0
 rect_min_size = Vector2( 0, 50 )
 rect_pivot_offset = Vector2( -1174, -68 )
 hint_tooltip = "[Shift]+Left-Click to Select
@@ -472,9 +471,9 @@ show_only = 1
 max_width = 36
 
 [node name="MarginContainer3" type="MarginContainer" parent="PanelContainer3/VBoxContainer"]
-margin_top = 309.0
+margin_top = 352.0
 margin_right = 133.0
-margin_bottom = 436.0
+margin_bottom = 516.0
 size_flags_vertical = 3
 size_flags_stretch_ratio = 4.0
 
@@ -487,42 +486,42 @@ custom_fonts/font = ExtResource( 7 )
 align = 1
 
 [node name="HSeparator" type="HSeparator" parent="PanelContainer3/VBoxContainer"]
-margin_top = 440.0
+margin_top = 520.0
 margin_right = 133.0
-margin_bottom = 444.0
+margin_bottom = 524.0
 
 [node name="ZoomCheckBox" type="CheckBox" parent="PanelContainer3/VBoxContainer"]
-margin_top = 448.0
+margin_top = 528.0
 margin_right = 133.0
-margin_bottom = 472.0
+margin_bottom = 552.0
 text = "Zoom"
 
 [node name="UndoButton" type="Button" parent="PanelContainer3/VBoxContainer"]
-margin_top = 476.0
+margin_top = 556.0
 margin_right = 133.0
-margin_bottom = 496.0
+margin_bottom = 576.0
 hint_tooltip = "[Ctrl]+[Z]"
 disabled = true
 text = "Undo"
 
 [node name="RedoButton" type="Button" parent="PanelContainer3/VBoxContainer"]
-margin_top = 500.0
+margin_top = 580.0
 margin_right = 133.0
-margin_bottom = 520.0
+margin_bottom = 600.0
 hint_tooltip = "[Ctrl]+[Y]
 [Ctrl]+[Shift]+[Z]"
 text = "Redo"
 
 [node name="SaveButton" type="Button" parent="PanelContainer3/VBoxContainer"]
-margin_top = 524.0
+margin_top = 604.0
 margin_right = 133.0
-margin_bottom = 544.0
+margin_bottom = 624.0
 text = "Save..."
 
 [node name="LoadButton" type="Button" parent="PanelContainer3/VBoxContainer"]
-margin_top = 548.0
+margin_top = 628.0
 margin_right = 133.0
-margin_bottom = 568.0
+margin_bottom = 648.0
 text = "Load..."
 
 [node name="LoadFileDialog" type="FileDialog" parent="PanelContainer3/VBoxContainer"]
@@ -531,20 +530,13 @@ margin_bottom = 130.0
 popup_exclusive = true
 window_title = "Open a File"
 mode = 0
-filters = PoolStringArray( "*.rlvl ; Saved Levels" )
-
-[node name="LoadFileDialog2" type="FileDialog" parent="PanelContainer3/VBoxContainer"]
-margin_right = 315.0
-margin_bottom = 130.0
-popup_exclusive = true
-window_title = "Open a File"
-mode = 0
+access = 1
 filters = PoolStringArray( "*.rlvl ; Saved Levels" )
 
 [node name="SandboxCheckBox" type="CheckBox" parent="PanelContainer3/VBoxContainer"]
-margin_top = 572.0
+margin_top = 652.0
 margin_right = 133.0
-margin_bottom = 596.0
+margin_bottom = 676.0
 text = "Sandbox Mode   "
 
 [node name="SandboxConfirmationDialog" type="ConfirmationDialog" parent="PanelContainer3/VBoxContainer"]
@@ -557,7 +549,7 @@ dialog_autowrap = true
 margin_left = 151.0
 margin_top = 110.0
 margin_right = 1280.0
-margin_bottom = 720.0
+margin_bottom = 800.0
 mouse_filter = 1
 size_flags_horizontal = 7
 size_flags_vertical = 7
@@ -566,7 +558,7 @@ size_flags_vertical = 7
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 1122.0
-margin_bottom = 603.0
+margin_bottom = 683.0
 mouse_filter = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer4/ScrollContainer"]
@@ -651,7 +643,7 @@ tile_data = PoolIntArray( 0, 327699, 0 )
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 1122.0
-margin_bottom = 603.0
+margin_bottom = 683.0
 mouse_filter = 2
 theme = SubResource( 1 )
 alignment = 2
@@ -683,7 +675,6 @@ color = Color( 0.219608, 0.219608, 0.219608, 0.560784 )
 [connection signal="pressed" from="PanelContainer3/VBoxContainer/SaveButton" to="." method="_on_SaveButton_pressed"]
 [connection signal="pressed" from="PanelContainer3/VBoxContainer/LoadButton" to="." method="_on_LoadButton_pressed"]
 [connection signal="file_selected" from="PanelContainer3/VBoxContainer/LoadFileDialog" to="." method="_on_LoadFileDialog_file_selected"]
-[connection signal="file_selected" from="PanelContainer3/VBoxContainer/LoadFileDialog2" to="." method="_on_LoadFileDialog_file_selected"]
 [connection signal="toggled" from="PanelContainer3/VBoxContainer/SandboxCheckBox" to="." method="_on_SandboxCheckBox_toggled"]
 [connection signal="confirmed" from="PanelContainer3/VBoxContainer/SandboxConfirmationDialog" to="." method="_on_SandboxConfirmationDialog_confirmed"]
 [connection signal="pressed" from="PanelContainer4/ScrollContainer/VBoxContainer/CampaignTitleRow/MarkCompletedButton" to="." method="_on_MarkCompletedButton_pressed"]

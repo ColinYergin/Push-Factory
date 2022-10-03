@@ -763,17 +763,13 @@ func level_requirement_gui_input(event, testseed: String):
 func set_LoadFileDialog_path():
 	var dialog = $PanelContainer3/VBoxContainer/LoadFileDialog;
 	if Global.playing_campaign_level_with_path == null:
-		dialog.access = FileDialog.ACCESS_RESOURCES;
 		dialog.filters = ["*.rlvl ; Saved Levels"];
-		if !dialog.current_dir.begins_with("res://"):
-			dialog.current_dir = "res://";
+		dialog.current_dir = "user://";
 	elif Global.playing_campaign_solution_with_path == null:
-		dialog.access = FileDialog.ACCESS_USERDATA;
 		var prefix = Global.get_campaign_level_prefix();
 		dialog.filters = [prefix + "*.rlvl ; Saved solutions to " + prefix];
 		dialog.current_path = "user://CampaignSaves/" + prefix;
 	else:
-		dialog.access = FileDialog.ACCESS_USERDATA;
 		var prefix = Global.get_campaign_level_prefix();
 		dialog.filters = [prefix + "*.rlvl ; Saved solutions to " + prefix];
 		dialog.current_path = Global.playing_campaign_solution_with_path;
@@ -836,7 +832,6 @@ func save_map(path: String):
 	else:
 		log_for_user("Unknown extension :\"" + path.get_extension() + "\"");
 	$PanelContainer3/VBoxContainer/LoadFileDialog.invalidate();
-	$PanelContainer3/VBoxContainer/LoadFileDialog2.invalidate();
 
 
 func load_map(path: String) -> bool:

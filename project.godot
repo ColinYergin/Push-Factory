@@ -67,7 +67,7 @@ gdscript/warnings/integer_division=false
 [display]
 
 window/size/width=1280
-window/size/height=720
+window/size/height=800
 window/stretch/aspect="expand"
 
 [editor]
