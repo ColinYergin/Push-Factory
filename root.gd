@@ -153,8 +153,8 @@ func _process(_delta):
 	var can_mark_level_as_completed = true;
 	for req in level_requirements:
 		if req[2] != 100:
-			can_mark_level_as_completed = false
-	if can_mark_level_as_completed:
+			can_mark_level_as_completed = false;
+	if can_mark_level_as_completed and $PanelContainer4/ScrollContainer/VBoxContainer/CampaignTitleRow/MarkCompletedButton.disabled:
 		$PanelContainer4/ScrollContainer/VBoxContainer/CampaignTitleRow/MarkCompletedButton.disabled = false;
 		$PanelContainer4/ScrollContainer.scroll_vertical = 0;
 	
