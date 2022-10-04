@@ -126,6 +126,7 @@ margin_right = 140.0
 margin_bottom = 683.0
 
 [node name="FPSInfoLine2" type="HBoxContainer" parent="PanelContainer3/VBoxContainer"]
+visible = false
 margin_right = 133.0
 margin_bottom = 29.0
 rect_pivot_offset = Vector2( -1174, -68 )
@@ -144,9 +145,8 @@ custom_fonts/font = ExtResource( 5 )
 text = "0"
 
 [node name="SeedLineEdit" type="LineEdit" parent="PanelContainer3/VBoxContainer"]
-margin_top = 33.0
 margin_right = 133.0
-margin_bottom = 59.0
+margin_bottom = 26.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 3 )
 clear_button_enabled = true
@@ -154,26 +154,26 @@ placeholder_text = "TEST RNG \"SEED\""
 placeholder_alpha = 0.356
 
 [node name="ResetButton" type="Button" parent="PanelContainer3/VBoxContainer"]
-margin_top = 63.0
+margin_top = 30.0
 margin_right = 133.0
-margin_bottom = 104.0
+margin_bottom = 71.0
 hint_tooltip = "[R]"
 custom_fonts/font = ExtResource( 8 )
 disabled = true
 text = "Reset"
 
 [node name="StepButton" type="Button" parent="PanelContainer3/VBoxContainer"]
-margin_top = 108.0
+margin_top = 75.0
 margin_right = 133.0
-margin_bottom = 149.0
+margin_bottom = 116.0
 hint_tooltip = "[S]"
 custom_fonts/font = ExtResource( 8 )
 text = "Step"
 
 [node name="PlayCheckBox" type="Button" parent="PanelContainer3/VBoxContainer"]
-margin_top = 153.0
+margin_top = 120.0
 margin_right = 133.0
-margin_bottom = 194.0
+margin_bottom = 161.0
 hint_tooltip = "[P]"
 custom_fonts/font = ExtResource( 8 )
 toggle_mode = true
@@ -182,9 +182,9 @@ text = "Play"
 expand_icon = true
 
 [node name="TimeInfoLine" type="HBoxContainer" parent="PanelContainer3/VBoxContainer"]
-margin_top = 198.0
+margin_top = 165.0
 margin_right = 133.0
-margin_bottom = 227.0
+margin_bottom = 194.0
 rect_pivot_offset = Vector2( -1174, -68 )
 
 [node name="TimeLabelLabel" type="Label" parent="PanelContainer3/VBoxContainer/TimeInfoLine"]
@@ -230,15 +230,15 @@ text = "0"
 align = 2
 
 [node name="MarginContainer2" type="MarginContainer" parent="PanelContainer3/VBoxContainer"]
-margin_top = 231.0
+margin_top = 198.0
 margin_right = 133.0
-margin_bottom = 272.0
+margin_bottom = 245.0
 size_flags_vertical = 3
 
 [node name="SelectionInfoLine" type="VBoxContainer" parent="PanelContainer3/VBoxContainer"]
-margin_top = 276.0
+margin_top = 249.0
 margin_right = 133.0
-margin_bottom = 348.0
+margin_bottom = 321.0
 rect_min_size = Vector2( 0, 50 )
 rect_pivot_offset = Vector2( -1174, -68 )
 hint_tooltip = "[Shift]+Left-Click to Select
@@ -471,9 +471,9 @@ show_only = 1
 max_width = 36
 
 [node name="MarginContainer3" type="MarginContainer" parent="PanelContainer3/VBoxContainer"]
-margin_top = 352.0
+margin_top = 325.0
 margin_right = 133.0
-margin_bottom = 516.0
+margin_bottom = 515.0
 size_flags_vertical = 3
 size_flags_stretch_ratio = 4.0
 
@@ -486,42 +486,42 @@ custom_fonts/font = ExtResource( 7 )
 align = 1
 
 [node name="HSeparator" type="HSeparator" parent="PanelContainer3/VBoxContainer"]
-margin_top = 520.0
+margin_top = 519.0
 margin_right = 133.0
-margin_bottom = 524.0
+margin_bottom = 523.0
 
 [node name="ZoomCheckBox" type="CheckBox" parent="PanelContainer3/VBoxContainer"]
-margin_top = 528.0
+margin_top = 527.0
 margin_right = 133.0
-margin_bottom = 552.0
+margin_bottom = 551.0
 text = "Zoom"
 
 [node name="UndoButton" type="Button" parent="PanelContainer3/VBoxContainer"]
-margin_top = 556.0
+margin_top = 555.0
 margin_right = 133.0
-margin_bottom = 576.0
+margin_bottom = 575.0
 hint_tooltip = "[Ctrl]+[Z]"
 disabled = true
 text = "Undo"
 
 [node name="RedoButton" type="Button" parent="PanelContainer3/VBoxContainer"]
-margin_top = 580.0
+margin_top = 579.0
 margin_right = 133.0
-margin_bottom = 600.0
+margin_bottom = 599.0
 hint_tooltip = "[Ctrl]+[Y]
 [Ctrl]+[Shift]+[Z]"
 text = "Redo"
 
 [node name="SaveButton" type="Button" parent="PanelContainer3/VBoxContainer"]
-margin_top = 604.0
+margin_top = 603.0
 margin_right = 133.0
-margin_bottom = 624.0
+margin_bottom = 623.0
 text = "Save..."
 
 [node name="LoadButton" type="Button" parent="PanelContainer3/VBoxContainer"]
-margin_top = 628.0
+margin_top = 627.0
 margin_right = 133.0
-margin_bottom = 648.0
+margin_bottom = 647.0
 text = "Load..."
 
 [node name="LoadFileDialog" type="FileDialog" parent="PanelContainer3/VBoxContainer"]
@@ -534,9 +534,9 @@ access = 1
 filters = PoolStringArray( "*.rlvl ; Saved Levels" )
 
 [node name="SandboxCheckBox" type="CheckBox" parent="PanelContainer3/VBoxContainer"]
-margin_top = 652.0
+margin_top = 651.0
 margin_right = 133.0
-margin_bottom = 676.0
+margin_bottom = 675.0
 text = "Sandbox Mode   "
 
 [node name="SandboxConfirmationDialog" type="ConfirmationDialog" parent="PanelContainer3/VBoxContainer"]
