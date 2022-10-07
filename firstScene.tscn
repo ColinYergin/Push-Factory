@@ -150,7 +150,7 @@ margin_bottom = 26.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 3 )
 clear_button_enabled = true
-placeholder_text = "TEST RNG \"SEED\""
+placeholder_text = "TEST RNG SEED"
 placeholder_alpha = 0.356
 
 [node name="ResetButton" type="Button" parent="PanelContainer3/VBoxContainer"]
@@ -232,41 +232,47 @@ align = 2
 [node name="MarginContainer2" type="MarginContainer" parent="PanelContainer3/VBoxContainer"]
 margin_top = 198.0
 margin_right = 133.0
-margin_bottom = 245.0
+margin_bottom = 250.0
 size_flags_vertical = 3
 
 [node name="SelectionInfoLine" type="VBoxContainer" parent="PanelContainer3/VBoxContainer"]
-margin_top = 249.0
+margin_top = 254.0
 margin_right = 133.0
-margin_bottom = 321.0
+margin_bottom = 304.0
 rect_min_size = Vector2( 0, 50 )
 rect_pivot_offset = Vector2( -1174, -68 )
 hint_tooltip = "[Shift]+Left-Click to Select
 [Shift]+Right-Click to Clear"
 
-[node name="SelectionLabelLabel" type="Label" parent="PanelContainer3/VBoxContainer/SelectionInfoLine"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer3/VBoxContainer/SelectionInfoLine"]
 margin_right = 133.0
+margin_bottom = 14.0
+
+[node name="SelectionLabelLabel" type="Label" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/HBoxContainer"]
+margin_right = 59.0
 margin_bottom = 14.0
 text = "Selected:"
 align = 3
 
-[node name="SelectionLabel" type="Label" parent="PanelContainer3/VBoxContainer/SelectionInfoLine"]
-margin_top = 18.0
+[node name="SelectionLabel" type="Label" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/HBoxContainer"]
+margin_left = 63.0
 margin_right = 133.0
-margin_bottom = 32.0
+margin_bottom = 14.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+text = "        "
 valign = 1
 autowrap = true
 
 [node name="NotSelectedLabel" type="HBoxContainer" parent="PanelContainer3/VBoxContainer/SelectionInfoLine"]
-margin_top = 36.0
+margin_top = 18.0
 margin_right = 133.0
-margin_bottom = 72.0
+margin_bottom = 42.0
+size_flags_horizontal = 3
 
 [node name="NoneSelectedLabel" type="Label" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/NotSelectedLabel"]
-margin_right = 53.0
-margin_bottom = 36.0
+margin_right = 77.0
+margin_bottom = 24.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "None"
@@ -274,41 +280,42 @@ valign = 1
 autowrap = true
 
 [node name="ControllerTextureRect" type="TextureRect" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/NotSelectedLabel"]
-margin_left = 57.0
-margin_right = 93.0
-margin_bottom = 36.0
-rect_min_size = Vector2( 36, 36 )
+margin_left = 81.0
+margin_right = 105.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
 size_flags_horizontal = 0
 texture = ExtResource( 11 )
 expand = true
-stretch_mode = 5
+stretch_mode = 1
 script = ExtResource( 12 )
 path = "key/shift"
 show_only = 1
-max_width = 36
+max_width = 24
 
 [node name="ControllerTextureRect2" type="TextureRect" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/NotSelectedLabel"]
-margin_left = 97.0
+margin_left = 109.0
 margin_right = 133.0
-margin_bottom = 36.0
-rect_min_size = Vector2( 36, 36 )
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
 size_flags_horizontal = 0
 texture = ExtResource( 10 )
 expand = true
-stretch_mode = 5
+stretch_mode = 1
 script = ExtResource( 12 )
 path = "mouse/left"
 show_only = 1
-max_width = 36
+max_width = 24
 
 [node name="SomethingSelectedLabel" type="VBoxContainer" parent="PanelContainer3/VBoxContainer/SelectionInfoLine"]
 visible = false
-margin_top = 76.0
-margin_right = 129.0
-margin_bottom = 290.0
+margin_top = 46.0
+margin_right = 133.0
+margin_bottom = 200.0
+size_flags_horizontal = 3
 
 [node name="ControlsLabel" type="Label" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/SomethingSelectedLabel"]
-margin_right = 129.0
+margin_right = 133.0
 margin_bottom = 14.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -318,12 +325,13 @@ autowrap = true
 
 [node name="OverwriteControl" type="HBoxContainer" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/SomethingSelectedLabel"]
 margin_top = 18.0
-margin_right = 129.0
-margin_bottom = 54.0
+margin_right = 133.0
+margin_bottom = 42.0
+size_flags_horizontal = 3
 
 [node name="OverwriteControlLabel" type="Label" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/SomethingSelectedLabel/OverwriteControl"]
-margin_right = 89.0
-margin_bottom = 36.0
+margin_right = 105.0
+margin_bottom = 24.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "- Overwrite"
@@ -331,27 +339,28 @@ valign = 1
 autowrap = true
 
 [node name="ControllerTextureRect" type="TextureRect" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/SomethingSelectedLabel/OverwriteControl"]
-margin_left = 93.0
-margin_right = 129.0
-margin_bottom = 36.0
-rect_min_size = Vector2( 36, 36 )
+margin_left = 109.0
+margin_right = 133.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
 size_flags_horizontal = 0
 texture = ExtResource( 13 )
 expand = true
-stretch_mode = 5
+stretch_mode = 1
 script = ExtResource( 12 )
 path = "key/o"
 show_only = 1
-max_width = 36
+max_width = 24
 
 [node name="OverwriteControl2" type="HBoxContainer" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/SomethingSelectedLabel"]
-margin_top = 58.0
-margin_right = 129.0
-margin_bottom = 94.0
+margin_top = 46.0
+margin_right = 133.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
 
 [node name="OverwriteControlLabel" type="Label" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/SomethingSelectedLabel/OverwriteControl2"]
-margin_right = 89.0
-margin_bottom = 36.0
+margin_right = 105.0
+margin_bottom = 24.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "- Infill"
@@ -359,27 +368,28 @@ valign = 1
 autowrap = true
 
 [node name="ControllerTextureRect" type="TextureRect" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/SomethingSelectedLabel/OverwriteControl2"]
-margin_left = 93.0
-margin_right = 129.0
-margin_bottom = 36.0
-rect_min_size = Vector2( 36, 36 )
+margin_left = 109.0
+margin_right = 133.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
 size_flags_horizontal = 0
 texture = ExtResource( 15 )
 expand = true
-stretch_mode = 5
+stretch_mode = 1
 script = ExtResource( 12 )
 path = "key/i"
 show_only = 1
-max_width = 36
+max_width = 24
 
 [node name="OverwriteControl3" type="HBoxContainer" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/SomethingSelectedLabel"]
-margin_top = 98.0
-margin_right = 129.0
-margin_bottom = 134.0
+margin_top = 74.0
+margin_right = 133.0
+margin_bottom = 98.0
+size_flags_horizontal = 3
 
 [node name="OverwriteControlLabel" type="Label" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/SomethingSelectedLabel/OverwriteControl3"]
-margin_right = 89.0
-margin_bottom = 36.0
+margin_right = 105.0
+margin_bottom = 24.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "- Delete"
@@ -387,27 +397,28 @@ valign = 1
 autowrap = true
 
 [node name="ControllerTextureRect" type="TextureRect" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/SomethingSelectedLabel/OverwriteControl3"]
-margin_left = 93.0
-margin_right = 129.0
-margin_bottom = 36.0
-rect_min_size = Vector2( 36, 36 )
+margin_left = 109.0
+margin_right = 133.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
 size_flags_horizontal = 0
 texture = ExtResource( 16 )
 expand = true
-stretch_mode = 5
+stretch_mode = 1
 script = ExtResource( 12 )
 path = "key/del"
 show_only = 1
-max_width = 36
+max_width = 24
 
 [node name="OverwriteControl4" type="HBoxContainer" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/SomethingSelectedLabel"]
-margin_top = 138.0
-margin_right = 129.0
-margin_bottom = 174.0
+margin_top = 102.0
+margin_right = 133.0
+margin_bottom = 126.0
+size_flags_horizontal = 3
 
 [node name="OverwriteControlLabel" type="Label" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/SomethingSelectedLabel/OverwriteControl4"]
-margin_right = 89.0
-margin_bottom = 36.0
+margin_right = 105.0
+margin_bottom = 24.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "- Clear"
@@ -415,27 +426,28 @@ valign = 1
 autowrap = true
 
 [node name="ControllerTextureRect" type="TextureRect" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/SomethingSelectedLabel/OverwriteControl4"]
-margin_left = 93.0
-margin_right = 129.0
-margin_bottom = 36.0
-rect_min_size = Vector2( 36, 36 )
+margin_left = 109.0
+margin_right = 133.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
 size_flags_horizontal = 0
 texture = ExtResource( 14 )
 expand = true
-stretch_mode = 5
+stretch_mode = 1
 script = ExtResource( 12 )
 path = "key/esc"
 show_only = 1
-max_width = 36
+max_width = 24
 
 [node name="OverwriteControl5" type="HBoxContainer" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/SomethingSelectedLabel"]
-margin_top = 178.0
-margin_right = 129.0
-margin_bottom = 214.0
+margin_top = 130.0
+margin_right = 133.0
+margin_bottom = 154.0
+size_flags_horizontal = 3
 
 [node name="OverwriteControlLabel" type="Label" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/SomethingSelectedLabel/OverwriteControl5"]
-margin_right = 49.0
-margin_bottom = 36.0
+margin_right = 77.0
+margin_bottom = 24.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "    or"
@@ -443,37 +455,37 @@ valign = 1
 autowrap = true
 
 [node name="ControllerTextureRect" type="TextureRect" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/SomethingSelectedLabel/OverwriteControl5"]
-margin_left = 53.0
-margin_right = 89.0
-margin_bottom = 36.0
-rect_min_size = Vector2( 36, 36 )
+margin_left = 81.0
+margin_right = 105.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
 size_flags_horizontal = 0
 texture = ExtResource( 11 )
 expand = true
-stretch_mode = 5
+stretch_mode = 1
 script = ExtResource( 12 )
 path = "key/shift"
 show_only = 1
-max_width = 36
+max_width = 24
 
 [node name="ControllerTextureRect2" type="TextureRect" parent="PanelContainer3/VBoxContainer/SelectionInfoLine/SomethingSelectedLabel/OverwriteControl5"]
-margin_left = 93.0
-margin_right = 129.0
-margin_bottom = 36.0
-rect_min_size = Vector2( 36, 36 )
+margin_left = 109.0
+margin_right = 133.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
 size_flags_horizontal = 0
 texture = ExtResource( 17 )
 expand = true
-stretch_mode = 5
+stretch_mode = 1
 script = ExtResource( 12 )
 path = "mouse/right"
 show_only = 1
-max_width = 36
+max_width = 24
 
 [node name="MarginContainer3" type="MarginContainer" parent="PanelContainer3/VBoxContainer"]
-margin_top = 325.0
+margin_top = 308.0
 margin_right = 133.0
-margin_bottom = 515.0
+margin_bottom = 516.0
 size_flags_vertical = 3
 size_flags_stretch_ratio = 4.0
 
@@ -486,42 +498,42 @@ custom_fonts/font = ExtResource( 7 )
 align = 1
 
 [node name="HSeparator" type="HSeparator" parent="PanelContainer3/VBoxContainer"]
-margin_top = 519.0
+margin_top = 520.0
 margin_right = 133.0
-margin_bottom = 523.0
+margin_bottom = 524.0
 
 [node name="ZoomCheckBox" type="CheckBox" parent="PanelContainer3/VBoxContainer"]
-margin_top = 527.0
+margin_top = 528.0
 margin_right = 133.0
-margin_bottom = 551.0
+margin_bottom = 552.0
 text = "Zoom"
 
 [node name="UndoButton" type="Button" parent="PanelContainer3/VBoxContainer"]
-margin_top = 555.0
+margin_top = 556.0
 margin_right = 133.0
-margin_bottom = 575.0
+margin_bottom = 576.0
 hint_tooltip = "[Ctrl]+[Z]"
 disabled = true
 text = "Undo"
 
 [node name="RedoButton" type="Button" parent="PanelContainer3/VBoxContainer"]
-margin_top = 579.0
+margin_top = 580.0
 margin_right = 133.0
-margin_bottom = 599.0
+margin_bottom = 600.0
 hint_tooltip = "[Ctrl]+[Y]
 [Ctrl]+[Shift]+[Z]"
 text = "Redo"
 
 [node name="SaveButton" type="Button" parent="PanelContainer3/VBoxContainer"]
-margin_top = 603.0
+margin_top = 604.0
 margin_right = 133.0
-margin_bottom = 623.0
+margin_bottom = 624.0
 text = "Save..."
 
 [node name="LoadButton" type="Button" parent="PanelContainer3/VBoxContainer"]
-margin_top = 627.0
+margin_top = 628.0
 margin_right = 133.0
-margin_bottom = 647.0
+margin_bottom = 648.0
 text = "Load..."
 
 [node name="LoadFileDialog" type="FileDialog" parent="PanelContainer3/VBoxContainer"]
@@ -534,9 +546,9 @@ access = 1
 filters = PoolStringArray( "*.rlvl ; Saved Levels" )
 
 [node name="SandboxCheckBox" type="CheckBox" parent="PanelContainer3/VBoxContainer"]
-margin_top = 651.0
+margin_top = 652.0
 margin_right = 133.0
-margin_bottom = 675.0
+margin_bottom = 676.0
 text = "Sandbox Mode   "
 
 [node name="SandboxConfirmationDialog" type="ConfirmationDialog" parent="PanelContainer3/VBoxContainer"]
@@ -584,9 +596,17 @@ margin_right = 352.0
 margin_bottom = 41.0
 rect_min_size = Vector2( 40, 0 )
 
-[node name="MarkCompletedButton" type="Button" parent="PanelContainer4/ScrollContainer/VBoxContainer/CampaignTitleRow"]
+[node name="ValidateSolutionButton" type="Button" parent="PanelContainer4/ScrollContainer/VBoxContainer/CampaignTitleRow"]
 margin_left = 356.0
-margin_right = 704.0
+margin_right = 653.0
+margin_bottom = 41.0
+custom_fonts/font = ExtResource( 8 )
+toggle_mode = true
+text = "Validate Solution"
+
+[node name="MarkCompletedButton" type="Button" parent="PanelContainer4/ScrollContainer/VBoxContainer/CampaignTitleRow"]
+margin_left = 657.0
+margin_right = 1005.0
 margin_bottom = 41.0
 custom_fonts/font = ExtResource( 8 )
 disabled = true
@@ -677,4 +697,5 @@ color = Color( 0.219608, 0.219608, 0.219608, 0.560784 )
 [connection signal="file_selected" from="PanelContainer3/VBoxContainer/LoadFileDialog" to="." method="_on_LoadFileDialog_file_selected"]
 [connection signal="toggled" from="PanelContainer3/VBoxContainer/SandboxCheckBox" to="." method="_on_SandboxCheckBox_toggled"]
 [connection signal="confirmed" from="PanelContainer3/VBoxContainer/SandboxConfirmationDialog" to="." method="_on_SandboxConfirmationDialog_confirmed"]
+[connection signal="pressed" from="PanelContainer4/ScrollContainer/VBoxContainer/CampaignTitleRow/ValidateSolutionButton" to="." method="_on_ValidateSolutionButton_pressed"]
 [connection signal="pressed" from="PanelContainer4/ScrollContainer/VBoxContainer/CampaignTitleRow/MarkCompletedButton" to="." method="_on_MarkCompletedButton_pressed"]

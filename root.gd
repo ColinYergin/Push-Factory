@@ -79,6 +79,7 @@ func _ready():
 	
 	_on_SandboxCheckBox_toggled($PanelContainer3/VBoxContainer/SandboxCheckBox.pressed);
 	$PanelContainer4/ScrollContainer/VBoxContainer/CampaignTitleRow/MarkCompletedButton.disabled = true;
+	$PanelContainer4/ScrollContainer/VBoxContainer/CampaignTitleRow/ValidateSolutionButton.disabled = false;
 	
 	if Global.playing_campaign_level_with_path == null:
 		if load_map("user://autosave.rlvl"):
@@ -140,8 +141,12 @@ func finish_tick():
 		for i in range(level_requirements.size()):
 			var req = level_requirements[i];
 			if req[0] == s:
+				var before = req[2];
 				req[2] = max(req[2], int(100 * min(1, float(current_step - solved_since) / req[1])));
 				$PanelContainer4/ScrollContainer/VBoxContainer/LevelRequirements.get_child(i + 1).value = req[2];
+				if req[2] == 100 and before != 100 and $PanelContainer4/ScrollContainer/VBoxContainer/CampaignTitleRow/ValidateSolutionButton.pressed:
+					$PanelContainer3/VBoxContainer/PlayCheckBox.pressed = false;
+					_on_ValidateSolutionButton_pressed();
 	
 	$PanelContainer3/VBoxContainer/LoadButton.disabled = true;
 	$PanelContainer3/VBoxContainer/SaveButton.disabled = true;
@@ -163,6 +168,7 @@ func _process(_delta):
 			can_mark_level_as_completed = false;
 	if can_mark_level_as_completed and $PanelContainer4/ScrollContainer/VBoxContainer/CampaignTitleRow/MarkCompletedButton.disabled and $PanelContainer4/ScrollContainer/VBoxContainer/CampaignTitleRow.visible:
 		$PanelContainer4/ScrollContainer/VBoxContainer/CampaignTitleRow/MarkCompletedButton.disabled = false;
+		$PanelContainer4/ScrollContainer/VBoxContainer/CampaignTitleRow/ValidateSolutionButton.disabled = true;
 		$PanelContainer4/ScrollContainer.scroll_vertical = 0;
 		$PanelContainer4/ScrollContainer.scroll_horizontal = 0;
 	
@@ -309,7 +315,7 @@ func select_none():
 	selection_start = null;
 	selection_end = null;
 	$PanelContainer4/ScrollContainer/VBoxContainer/ViewportContainer/TileMap/SelectionBorder.visible = false;
-	$PanelContainer3/VBoxContainer/SelectionInfoLine/SelectionLabel.text = "";
+	$PanelContainer3/VBoxContainer/SelectionInfoLine/HBoxContainer/SelectionLabel.text = "        ";
 	$PanelContainer3/VBoxContainer/SelectionInfoLine/NotSelectedLabel.visible = true;
 	$PanelContainer3/VBoxContainer/SelectionInfoLine/SomethingSelectedLabel.visible = false;
 
@@ -318,7 +324,7 @@ func set_selection(start: Vector2, end: Vector2):
 	selection_start = start;
 	selection_end = end;
 	render_selection_border(selection_start.x, selection_start.y, selection_end.x, selection_end.y);
-	$PanelContainer3/VBoxContainer/SelectionInfoLine/SelectionLabel.text = str(abs(selection_end.x - selection_start.x) + 1) + "×" + str(abs(selection_end.y - selection_start.y) + 1);
+	$PanelContainer3/VBoxContainer/SelectionInfoLine/HBoxContainer/SelectionLabel.text = str(abs(selection_end.x - selection_start.x) + 1) + "×" + str(abs(selection_end.y - selection_start.y) + 1);
 	$PanelContainer3/VBoxContainer/SelectionInfoLine/NotSelectedLabel.visible = false;
 	$PanelContainer3/VBoxContainer/SelectionInfoLine/SomethingSelectedLabel.visible = true;
 
@@ -824,7 +830,16 @@ func _on_MarkCompletedButton_pressed():
 	save_map("user://CampaignSaves/" + Global.get_campaign_level_prefix().trim_suffix("-") + ".rlvl");
 	if get_tree().change_scene("res://levelselect.tscn") != OK:
 		print("Failed to open level select");
-	
+
+
+func _on_ValidateSolutionButton_pressed():
+	for r in level_requirements:
+		if r[2] == 100:
+			continue;
+		_on_ResetButton_pressed();
+		$PanelContainer3/VBoxContainer/SeedLineEdit.text = r[0];
+		$PanelContainer3/VBoxContainer/PlayCheckBox.pressed = true;
+		return;
 
 
 func save_map(path: String):
